@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+      }
+      body {
+        width: 100vw;
+        min-height: 100dvh;
+        background: var(--Dark-Blue, #00171f);
+        color: white;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .navbar {
+        background: red;
+      }
+      main {
+        background: rgb(98, 240, 55);
+      }
+      .main-content {
+        height: 100vh;
+        background: var(--Dark-Blue, #b20bd7);
+        padding: 2.4rem;
+      }
+      .asidebar {
+        height: 100vh;
+        background: var(--Dark-Blue, #05afe7);
+        padding: 2.4rem;
+      }
+
+      /* Mobile Designing */
+      .layout {
+        position: relative;
+        width: 100vw;
+        min-height: 100dvh;
+        overflow-x: hidden;
+      }
+
+      .navbar {
+        background: red;
+        width: 100%;
+        height: 100dvh;
+
+        position: sticky;
+        inset: 0;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: 100%;
+
+        display: inline-flex;
+        padding: 4rem 0px 2rem;
+        flex-direction: column;
+        gap: 4rem;
+
+        justify-content: space-evenly;
+
+        max-width: clamp(32rem, calc(100vw - 75vw), 100%);
+      }
+
+      /* Navbar Settings copied from index.html */
+      .menu_links {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+      }
+
+      .menu_link {
+        display: flex;
+        padding: 16px 12px 16px 40px;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+      }
+
+      .menu_link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8px;
+        height: 100%;
+        background: white;
+        border-radius: 2rem;
+      }
+
+      .link_text {
+        color: var(--white, #fff);
+        text-align: center;
+        font-family: Poppins, "sans-serif";
+        font-size: 1.8rem;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+        text-transform: capitalize;
+      }
+
+      .backBtn {
+        position: absolute;
+        right: 10%;
+        top: 12%;
+      }
+
+      main {
+        position: absolute;
+        inset: 0;
+        width: 100vw;
+        height: 100dvh;
+        transition: 0.5s linear;
+      }
+
+      main.active {
+        scale: 0.85;
+        transform: translate(75%, 15%);
+        border-radius: 1rem;
+      }
+
+      button {
+        display: block;
+      }
+
+      /* Mobile: 360×640, 414×896
+      Desktop: 1024×768, 1920×1080
+      Tablet: 601×962, 1280×800  */
+
+      @media (width>=480px) {
+        main.active {
+          scale: 0.9;
+          transform: translate(60%, 15%);
+        }
+      }
+      @media (width>=720px) {
+        main.active {
+          scale: 0.9;
+          transform: translate(50%, 20%);
+        }
+      }
+      /* Laptop Designing */
+      @media (width>=962px) {
+        .layout {
+          display: flex;
+        }
+
+        .navbar {
+          max-width: clamp(32rem, calc(100vw - 75vw), 100%);
+        }
+
+        .navbar button {
+          margin-top: auto;
+        }
+        .backBtn {
+          display: none;
+        }
+
+        main {
+          flex: 1;
+          position: relative;
+          padding: 0;
+        }
+
+        .main-content,
+        .asidebar {
+          border-radius: 25px;
+        }
+      }
+
+      /* Desktop Designing */
+      @media (width>=1440px) {
+        main {
+          display: flex;
+        }
+
+        .main-content {
+          width: clamp(50vw, calc(100vw - 50vw), 100%);
+        }
+        .asidebar {
+          width: clamp(25vw, calc(100vw - 75vw), 100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <!-- <div class="navbar">Navbar</div> -->
+      <div class="navbar">
+        <div class="backBtn">backIcon</div>
+        <div class="sidebar">
+          <div class="sidebar_top">LogoName</div>
+          <nav class="menu_links">
+            <li>
+              <a href="#" class="menu_link"
+                ><span class="link_text">link1</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="menu_link"
+                ><span class="link_text">link2</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="menu_link"
+                ><span class="link_text">link3</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="menu_link"
+                ><span class="link_text">link4</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="menu_link"
+                ><span class="link_text">link5</span></a
+              >
+            </li>
+          </nav>
+          <button>Logout</button>
+        </div>
+      </div>
+
+      <main>
+        <div class="main-content">
+          <header>
+            <p>Header</p>
+            <button class="toggleBtn">Toggle</button>
+          </header>
+          <p>Main Content</p>
+        </div>
+        <aside class="asidebar">aside bar</aside>
+      </main>
+    </div>
+
+    <script>
+      let btn = document.querySelector(".toggleBtn");
+      let main = document.querySelector("main");
+      btn.addEventListener("click", () => {
+        main.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

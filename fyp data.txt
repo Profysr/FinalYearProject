@@ -1,0 +1,24 @@
+A batch advisory dashboard is usually a complex dashboard that provides insights into the performance of a company or organization. This type of dashboard is specifically designed for advisors, who need to monitor the progress of multiple clients or project teams at once. As such, the dashboard should be easy to navigate and provide quick access to all relevant data points. One popular idea for a batch advisory dashboard design is to use a table structure, where each row represents a different client or project team, and each column represents a different metric or KPI. This allows advisors to quickly compare performance across clients or teams and make data-driven decisions
+
+
+
+kanban achaww acha iska 
+https://youtu.be/6a3Dz8gwjdg?si=ahpY-3Xsis9uIMWP
+
+
+Task Management Dashboard Ideas from figma:
+
+https://www.figma.com/file/6QiJ7FULTunzphxZJ4Fshw/Dashboards-Layout-Ideas-(Community)?type=design&node-id=202%3A234&mode=dev&t=QxA2Y6QC3Y9jIDPI-1
+
+https://www.figma.com/file/J2Ydm1dTFbGoaGXGV91zQ6/Task-Management-Dashboard-(Community)?type=design&node-id=0%3A1&mode=dev&t=m4Vy3Cx7R5R51dxS-1
+
+https://www.figma.com/file/JJRFK1VEl9x9d3tQcTSHuz/Free-Task-Management-Dashboard-(Community)?type=design&node-id=0%3A1&mode=dev&t=hXtioE8f2OEeoqJ8-1
+
+School Management Dashboard Ideas from figma
+
+https://www.figma.com/community/file/1219642652767985298
+
+
+
+****** Figma File Link ******
+https://www.figma.com/design/qyc2ClSMQl7lGN91UeiCbr/Modifying-FYP?node-id=128-133&t=zt1TIABY9QXZ3tWB-1
